@@ -1,0 +1,23 @@
+
+#main-container
+{
+    border-radius: 1rem;
+    min-height: 8rem;
+    background-color: rgb(240, 240, 240);
+    margin: 1% 0.4%; 
+    box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.3);
+}
+
+
+#head
+{
+    padding: 1.8rem 1.5rem 0px 1.5rem;
+
+    #project-title
+    {
+        margin: 0px;
+        font-size: 24px;
+        color: rgb(86, 86, 86);
+    }
+
+}

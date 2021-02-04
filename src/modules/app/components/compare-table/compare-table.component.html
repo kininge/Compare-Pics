@@ -1,0 +1,55 @@
+
+<div *ngIf="changeState== 'table'" id="comparison-table-container" (click)="changeView()">
+
+    <!-- comparison-table-title -->
+    <div id="table-title-container">
+
+        <h2 id="table-title">Comparison Table</h2>
+
+        <button id="close-table"><img src="assets/icon-close-512.webp" alt="close"></button>
+
+    </div>
+    <!-- comparison-table-title -->
+
+    <!-- comparison-table -->
+    <table>
+
+        <!-- Column titles -->
+            <thead>
+                <tr class="background-highlight">
+                    <th *ngFor="let title of tableTitle" scope="col">{{ title }}</th>
+                </tr>
+            </thead>
+        <!-- Column titles -->
+
+        <!-- Data -->
+            <tbody>
+                <tr *ngFor="let data of comparePicsList; let ind= index;">
+                    <td class="data" >{{ data.id }}</td>
+                    <td class="data" >
+                        <img class="table-pic" [src]="data.thumbnailUrl" [alt]="data.title">
+                    </td>
+                    <td class="data" >{{ data.title }}</td>
+                    <td class="data" >{{ data.url }}</td>
+                </tr>
+            </tbody>
+        <!-- Data -->
+        
+    </table>
+    <!-- comparison-table -->
+
+    <!-- table-closing -->
+    <div id="table-end">
+
+    </div>
+    <!-- table-closing -->
+
+</div>
+
+<div *ngIf="changeState== 'icon'" id="comparison-icon-container" (click)="changeView()">
+
+    <div id="pic-count">{{ comparePicsList.length }}</div>
+
+    <img id="comapare-icon" src="assets/table-512.webp" alt="table">
+
+</div>

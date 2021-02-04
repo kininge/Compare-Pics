@@ -1,0 +1,54 @@
+
+
+<!-- prtoject content -->
+<div id="content">
+
+    <div id="stack">
+        <div class="pic-container" *ngFor="let pic of presentPics; let ind= index">
+
+            <img src="{{ pic.thumbnailUrl }}" alt="{{ pic.title }}" />
+
+            <!-- pic-details -->
+            <div class="action-bar">
+
+                <!-- pic-title -->
+                <div class="title-container">
+
+                    <div class="pic-id">{{ pic.id }}</div>
+                    <div class="pic-title">{{ pic.title }}</div>
+
+                </div>
+                <!-- pic-title -->
+                
+                <div class="horizontal-line"></div>
+
+                <!-- pic-url -->
+                <small class="pic-url">{{ pic.url }}</small>
+                <!-- pic-url -->
+
+                <!-- user-action -->
+                <div class="user-action-container">
+
+                    <button 
+                        *ngIf="!pic.isSelected" 
+                        class="user-action-add" 
+                        (click)="addOrRemovePic('add', ind, pic.id)">
+                        Compare
+                    </button>
+
+                    <button 
+                        *ngIf="pic.isSelected" 
+                        class="user-action-remove" 
+                        (click)="addOrRemovePic('remove', ind, pic.id)">
+                        Remove
+                    </button>
+
+                </div>
+                <!-- user-action -->
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- prtoject content -->

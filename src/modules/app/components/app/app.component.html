@@ -1,0 +1,28 @@
+
+<!-- project compare-pics -->
+  <div id="main-container">
+
+    <!-- project header -->
+        <div id="head">
+
+            <h1 id="project-title">{{ projectName }}</h1>
+
+            <div class="horizontal-line"></div>
+
+        </div>
+    <!-- project header -->
+
+    <!-- pic-stack -->
+        <app-pic-stack (sendComparePics)="incomePics($event)"></app-pic-stack>
+    <!-- pic-stack -->
+
+    <!-- project footer -->
+        <app-foot></app-foot>
+    <!-- project footer -->
+
+    <!-- compate table -->
+        <app-compare-table [comparePicsList]="comparePics"></app-compare-table>
+    <!-- compate table -->
+
+  </div>
+<!-- project compare-pics -->
